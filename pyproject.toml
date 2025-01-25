@@ -1,9 +1,22 @@
 [build-system]
-requires = [
-    'setuptools>=59.5.0',
-    'wheel',
-    'Cython>=0.29.0,<3.0.0',
-    'numpy>=1.19.0'
+build-backend = 'mesonpy'
+requires = ['meson-python', 'numpy', 'cython']
+
+
+[project]
+name = 'satsmooth'
+description = "Dynamic temporal smoothing of satellite time series"
+readme = 'README.md'
+license = {file = "LICENSE.txt"}
+version = "1.5.16"
+
+authors = [{name='Jordan Graesser'}]
+maintainers = [
+  {name = 'Jordan Graesser'}
+]
+dependencies = [
+  'numpy',
+  'pandas'
 ]
 
 [tool.black]

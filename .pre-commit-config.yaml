@@ -5,17 +5,6 @@ repos:
     - id: black
       language_version: python3
       args: [--skip-string-normalization]
-  - repo: https://github.com/myint/docformatter
-    rev: v1.4
-    hooks:
-    - id: docformatter
-      args: [
-        --in-place,
-        --wrap-summaries,
-        '79',
-        --wrap-descriptions,
-        '79',
-      ]
   - repo: https://github.com/pycqa/flake8
     rev: 6.0.0
     hooks:

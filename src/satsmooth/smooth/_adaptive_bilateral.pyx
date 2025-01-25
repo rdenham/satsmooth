@@ -28,7 +28,7 @@ ctypedef np.float64_t DTYPE_float64_t
 ctypedef double (*metric_ptr)(double[::1], Py_ssize_t, Py_ssize_t) nogil
 
 
-cdef int _cmp(const void * pa, const void * pb) nogil:
+cdef int _cmp(const void * pa, const void * pb) noexcept nogil:
 
     cdef double a = (<double *>pa)[0]
     cdef double b = (<double *>pb)[0]

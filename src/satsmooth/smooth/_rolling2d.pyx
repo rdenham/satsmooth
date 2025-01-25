@@ -59,7 +59,7 @@ cdef inline void _rolling_mean1d(double[:, ::1] array,
                                  unsigned int w,
                                  unsigned int wh,
                                  double no_data_value,
-                                 double[::1] weights) nogil:
+                                 double[::1] weights) noexcept nogil:
 
     cdef:
         Py_ssize_t j
@@ -78,7 +78,7 @@ cdef inline void _rolling_q1d(double[:, ::1] array,
                               unsigned int w,
                               unsigned int wh,
                               double no_data_value,
-                              double q) nogil:
+                              double q) noexcept nogil:
 
     cdef:
         Py_ssize_t j
