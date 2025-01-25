@@ -14,6 +14,57 @@ py3.install_sources(
     pure: false
 )
 
+
+py3.install_sources(
+    [
+  'src/satsmooth/preprocessing/__init__.py',
+  'src/satsmooth/preprocessing/fill_gaps_nb.py',
+  'src/satsmooth/preprocessing/fill_gaps_py.py'
+    ],
+    subdir: 'satsmooth/preprocessing',
+    pure: false
+)
+
+
+py3.install_sources(
+    [
+  'src/satsmooth/detect/__init__.py'
+    ],
+    subdir: 'satsmooth/detect',
+    pure: false
+)
+
+
+
+py3.install_sources(
+    [
+  'src/satsmooth/anc/__init__.py',
+  'src/satsmooth/anc/anc_smoothers.py'
+    ],
+    subdir: 'satsmooth/anc',
+    pure: false
+)
+
+
+py3.install_sources(
+    [
+  'src/satsmooth/smooth/__init__.py',
+    ],
+    subdir: 'satsmooth/smooth',
+    pure: false
+)
+
+py3.install_sources(
+    [
+    'src/satsmooth/utils/__init__.py',
+    'src/satsmooth/utils/data_prep.py',
+    'src/satsmooth/utils/tfill.py' 
+    ],
+    subdir: 'satsmooth/utils',
+    pure: false
+)
+
+
 import('python').find_installation().extension_module(
   '_signal',
   'src/satsmooth/detect/_signal.pyx',
